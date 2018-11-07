@@ -24,12 +24,19 @@ void setup() {
   #include <themes/dark.h>
   ezt::setDebug(INFO);
   ez.begin();
+
+  Serial.println("");
+	Serial.println("");
+	Serial.println("-----------------------------------------");
+	Serial.println("  RICOH THETA S Remote Control Software  ");
+	Serial.println("           Full Control Edition          ");
 }
 
 void loop() {
   ezMenu mainmenu("Welcome to M5ez");
   mainmenu.txtSmall();
   mainmenu.addItem("Flexible text menus", mainmenu_menus);
+  mainmenu.addItem("System Information",sysInfo);
   mainmenu.addItem("Image menus", mainmenu_image);
   mainmenu.addItem("Neat messages", mainmenu_msgs);
   mainmenu.addItem("Multi-function buttons", mainmenu_buttons);
